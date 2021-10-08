@@ -17,8 +17,10 @@ namespace DataAccessLayer.Concrete
             //Yani conection stringimi .Net core da bu şekilde tanımlayabilirim.
             optionsBuilder.UseSqlServer("server=DESKTOP-8327BAT\\MSSQLSERVER01;database=ETradeDb3;integrated security=true;");
             //Veritabanı bağlantı stringimi bu şekilde tanımlarım.
+            optionsBuilder.UseSqlServer("server=DESKTOP-8327BAT\\MSSQLSERVER01;database=ETradeDb3;integrated security=true;");
 
         }
+
         public DbSet<AddressDefinition> AddressDefinitions { get; set; }
         public DbSet<Banks> Banks { get; set; }
         public DbSet<Bill> Bills { get; set; }
