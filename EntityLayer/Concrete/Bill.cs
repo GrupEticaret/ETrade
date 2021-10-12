@@ -17,5 +17,7 @@ namespace EntityLayer.Concrete
 
         public int AddressDefinitionID { get; set; }
         public AddressDefinition AddressDefinition { get; set; }
+
+        //deneme by taha
     }
 }
