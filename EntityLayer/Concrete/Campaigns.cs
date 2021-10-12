@@ -20,8 +20,11 @@ namespace EntityLayer.Concrete
         public string CampaignsStatement { get; set; }
         //kampanya ürün ilişkisi
         [ForeignKey("Product")]
+
         public int ProductID { get; set; }
         public Product Product { get; set; }
+
+        //saaaa  ekip
 
 
     }
