@@ -16,6 +16,7 @@ namespace EntityLayer.Concrete
         public DateTime StartDate { get; set; }
 
 
+        //deneme
 
 
         public DateTime FinishDate { get; set; }
