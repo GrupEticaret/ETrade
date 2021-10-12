@@ -25,7 +25,7 @@ namespace EntityLayer.Concrete
         public DateTime FinishDate { get; set; }
         public string CampaignsTitle { get; set; }
         public string CampaignsImage { get; set; }
-
+        //deneme
         public string CampaignsStatement { get; set; }
         //kampanya ürün ilişkisi
         //deneme-campaigns-by irem
