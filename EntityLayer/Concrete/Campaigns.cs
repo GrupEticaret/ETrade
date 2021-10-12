@@ -15,8 +15,11 @@ namespace EntityLayer.Concrete
         public double DiscountRatio { get; set; }
 
 
+        //int a=5
         //deneme
         public DateTime StartDate { get; set; }
+
+
 
 
         //deneme
