@@ -14,6 +14,7 @@ namespace EntityLayer.Concrete
         public int OrderID { get; set; }
         public Order Order { get; set; }
         [ForeignKey("AddressDefinition")]
+        //deneme
 
         public int AddressDefinitionID { get; set; }
         public AddressDefinition AddressDefinition { get; set; }
