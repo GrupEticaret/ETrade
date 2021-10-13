@@ -20,6 +20,7 @@ namespace EntityLayer.Concrete
 
 
         //deneme
+        //deneme2
 
 
         public DateTime FinishDate { get; set; }
