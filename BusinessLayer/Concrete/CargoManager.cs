@@ -1,4 +1,5 @@
 ﻿using BusinessLayer.Abstract;
+using DataAccessLayer.Abstract;
 using EntityLayer.Concrete;
 using System;
 using System.Collections.Generic;
@@ -10,6 +11,13 @@ namespace BusinessLayer.Concrete
 {
     public class CargoManager : ICargoService
     {
+        ICargoDal _cargoDal;
+
+        public CargoManager(ICargoDal cargoDal)
+        {
+            _cargoDal = cargoDal;
+        }
+
         public void AddCargo(Cargo cargo)
         {
             throw new NotImplementedException();

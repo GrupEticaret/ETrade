@@ -1,4 +1,5 @@
 ﻿using BusinessLayer.Abstract;
+using DataAccessLayer.Abstract;
 using EntityLayer.Concrete;
 using System;
 using System.Collections.Generic;
@@ -10,6 +11,13 @@ namespace BusinessLayer.Concrete
 {
     public class BillManager : IBillService
     {
+        IBillDal _billDal;
+
+        public BillManager(IBillDal billDal)
+        {
+            _billDal = billDal;
+        }
+
         public void AddBill(Bill bill)
         {
             throw new NotImplementedException();
