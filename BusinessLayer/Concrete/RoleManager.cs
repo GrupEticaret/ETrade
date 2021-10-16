@@ -1,4 +1,5 @@
 ﻿using BusinessLayer.Abstract;
+using DataAccessLayer.Abstract;
 using EntityLayer.Concrete;
 using System;
 using System.Collections.Generic;
@@ -10,6 +11,13 @@ namespace BusinessLayer.Concrete
 {
     public class RoleManager : IRoleService
     {
+        IRoleDal _roleDal;
+
+        public RoleManager(IRoleDal roleDal)
+        {
+            _roleDal = roleDal;
+        }
+
         public void AddRole(Role role)
         {
             throw new NotImplementedException();

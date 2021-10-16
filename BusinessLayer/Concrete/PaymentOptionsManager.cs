@@ -1,4 +1,5 @@
 ﻿using BusinessLayer.Abstract;
+using DataAccessLayer.Abstract;
 using EntityLayer.Concrete;
 using System;
 using System.Collections.Generic;
@@ -10,6 +11,13 @@ namespace BusinessLayer.Concrete
 {
     public class PaymentOptionsManager : IPaymentOptionsService
     {
+        IPaymentOptionsDal _paymentOptionsDal;
+
+        public PaymentOptionsManager(IPaymentOptionsDal paymentOptionsDal)
+        {
+            _paymentOptionsDal = paymentOptionsDal;
+        }
+
         public void AddPaymentOptions(PaymentOptions paymentOptions)
         {
             throw new NotImplementedException();

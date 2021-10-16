@@ -1,4 +1,5 @@
 ﻿using BusinessLayer.Abstract;
+using DataAccessLayer.Abstract;
 using EntityLayer.Concrete;
 using System;
 using System.Collections.Generic;
@@ -10,6 +11,13 @@ namespace BusinessLayer.Concrete
 {
     public class OrderManager : IOrderService
     {
+        IOrderDal _orderDal;
+
+        public OrderManager(IOrderDal orderDal)
+        {
+            _orderDal = orderDal;
+        }
+
         public void AddOrder(Order order)
         {
             throw new NotImplementedException();
