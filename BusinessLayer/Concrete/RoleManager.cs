@@ -11,6 +11,7 @@ namespace BusinessLayer.Concrete
 {
     public class RoleManager : IRoleService
     {
+        //deneme
         IRoleDal _roleDal;
 
         public RoleManager(IRoleDal roleDal)
