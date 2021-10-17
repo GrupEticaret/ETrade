@@ -38,7 +38,6 @@ namespace DataAccessLayer.Repositories
             return _object.Where(filter).ToList();
         }
 
-       
 
         public void Insert(T p)
         {
