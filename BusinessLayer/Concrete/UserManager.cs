@@ -11,6 +11,7 @@ namespace BusinessLayer.Concrete
 {
     class UserManager : IUserService
     {
+        //deneme
         IUserDal _userDal;
 
         public UserManager(IUserDal userDal)
