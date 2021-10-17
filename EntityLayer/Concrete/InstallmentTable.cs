@@ -12,6 +12,7 @@ namespace EntityLayer.Concrete
         [Key]
         public int InstallmentTableID { get; set; }
         public int InstallmentNumber { get; set; }
+
         public int InstallmentAmount { get; set; }
         public int TotalAmount { get; set; }
         //taksit tablosu taksit
