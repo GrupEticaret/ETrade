@@ -13,7 +13,18 @@ namespace EntityLayer.Concrete
         [Key]
         public int CampaignsID { get; set; }
         public double DiscountRatio { get; set; }
+
+
+        //int a=5
+        //deneme
         public DateTime StartDate { get; set; }
+
+
+
+
+        //deneme
+
+
         public DateTime FinishDate { get; set; }
         public string CampaignsTitle { get; set; }
         public string CampaignsImage { get; set; }
