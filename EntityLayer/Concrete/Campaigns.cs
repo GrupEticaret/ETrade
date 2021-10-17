@@ -28,14 +28,17 @@ namespace EntityLayer.Concrete
         public DateTime FinishDate { get; set; }
         public string CampaignsTitle { get; set; }
         public string CampaignsImage { get; set; }
-
         public string CampaignsStatement { get; set; }
         //kampanya ürün ilişkisi
         //deneme-campaigns-by irem
         //it is commited
         [ForeignKey("Product")]
+        ///deneme
         public int ProductID { get; set; }
         public Product Product { get; set; }
+        int a = 1;
+        int b = 2;
+        //saaaa  ekip
 
 
     }
