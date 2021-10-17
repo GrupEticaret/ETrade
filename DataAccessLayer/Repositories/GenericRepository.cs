@@ -20,7 +20,7 @@ namespace DataAccessLayer.Repositories
         {
             _object = context.Set<T>();
         }
- 
+
         public void Delete(T p)
         {
             var deletedEntity = context.Entry(p);
@@ -37,6 +37,7 @@ namespace DataAccessLayer.Repositories
         {
             return _object.Where(filter).ToList();
         }
+
 
         public void Insert(T p)
         {

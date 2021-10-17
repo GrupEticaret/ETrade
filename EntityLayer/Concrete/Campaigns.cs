@@ -19,6 +19,7 @@ namespace EntityLayer.Concrete
         public string CampaignsImage { get; set; }
         public string CampaignsStatement { get; set; }
         //kampanya ürün ilişkisi
+
         [ForeignKey("Product")]
         ///deneme
         public int ProductID { get; set; }
