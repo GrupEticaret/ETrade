@@ -14,5 +14,6 @@ namespace BusinessLayer.Abstract
         void UpdateOrderStatus(OrderStatus orderStatus);
         List<OrderStatus> GetList();
         OrderStatus GetByID(int id);
+        //
     }
 }
