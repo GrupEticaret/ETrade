@@ -18,17 +18,10 @@ namespace BusinessLayer.Concrete
             _subCategoryDal = subCategoryDal;
         }
 
-        public void AddSubCategory(SubCategory subCategory)
-        {
-            throw new NotImplementedException();
-        }
+        
 
-        public void DeleteSubCategory(SubCategory subCategory)
-        {
-            throw new NotImplementedException();
-        }
-
-        public SubCategory GetByID(int id)
+       
+        public SubCategory GetById(int id)
         {
             throw new NotImplementedException();
         }
@@ -38,9 +31,21 @@ namespace BusinessLayer.Concrete
             throw new NotImplementedException();
         }
 
-        public void UpdateSubCategory(SubCategory subCategory)
+        public void TAdd(SubCategory t)
         {
             throw new NotImplementedException();
         }
+
+        public void TDelete(SubCategory t)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void TUpdate(SubCategory t)
+        {
+            throw new NotImplementedException();
+        }
+
+       
     }
 }

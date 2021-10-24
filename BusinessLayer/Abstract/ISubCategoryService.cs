@@ -7,12 +7,14 @@ using System.Threading.Tasks;
 
 namespace BusinessLayer.Abstract
 {
-    public interface ISubCategoryService
+    public interface ISubCategoryService : IGenericService<SubCategory>
     {
+        /*
         void AddSubCategory(SubCategory subCategory);
         void DeleteSubCategory(SubCategory subCategory);
         void UpdateSubCategory(SubCategory subCategory);
         List<SubCategory> GetList();
         SubCategory GetByID(int id);
+        */
     }
 }
