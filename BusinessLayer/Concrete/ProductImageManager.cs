@@ -18,17 +18,11 @@ namespace BusinessLayer.Concrete
             _productImageDal = productImageDal;
         }
 
-        public void AddProductImage(ProductImage productImage)
-        {
-            throw new NotImplementedException();
-        }
+        
 
-        public void DeleteProductImage(ProductImage productImage)
-        {
-            throw new NotImplementedException();
-        }
+        
 
-        public ProductImage GetByID(int id)
+        public ProductImage GetById(int id)
         {
             throw new NotImplementedException();
         }
@@ -38,9 +32,21 @@ namespace BusinessLayer.Concrete
             throw new NotImplementedException();
         }
 
-        public void UpdateProductImage(ProductImage productImage)
+        public void TAdd(ProductImage t)
         {
             throw new NotImplementedException();
         }
+
+        public void TDelete(ProductImage t)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void TUpdate(ProductImage t)
+        {
+            throw new NotImplementedException();
+        }
+
+        
     }
 }

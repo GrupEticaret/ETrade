@@ -18,17 +18,10 @@ namespace BusinessLayer.Concrete
             _brandDal = brandDal;
         }
 
-        public void AddBrand(Brand brand)
-        {
-            throw new NotImplementedException();
-        }
+        
+       
 
-        public void DeleteBrand(Brand brand)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Brand GetByID(int id)
+        public Brand GetById(int id)
         {
             throw new NotImplementedException();
         }
@@ -38,9 +31,21 @@ namespace BusinessLayer.Concrete
             throw new NotImplementedException();
         }
 
-        public void UpdateBrand(Brand brand)
+        public void TAdd(Brand t)
         {
             throw new NotImplementedException();
         }
+
+        public void TDelete(Brand t)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void TUpdate(Brand t)
+        {
+            throw new NotImplementedException();
+        }
+
+       
     }
 }

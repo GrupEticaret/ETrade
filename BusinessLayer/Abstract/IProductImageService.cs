@@ -7,12 +7,14 @@ using System.Threading.Tasks;
 
 namespace BusinessLayer.Abstract
 {
-    public interface IProductImageService
+    public interface IProductImageService : IGenericService<ProductImage>
     {
+        /*
         void AddProductImage(ProductImage productImage);
         void DeleteProductImage(ProductImage productImage);
         void UpdateProductImage(ProductImage productImage);
         List<ProductImage> GetList();
         ProductImage GetByID(int id);
+        */
     }
 }
