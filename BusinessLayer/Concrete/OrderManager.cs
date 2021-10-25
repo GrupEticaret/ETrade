@@ -18,17 +18,7 @@ namespace BusinessLayer.Concrete
             _orderDal = orderDal;
         }
 
-        public void AddOrder(Order order)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void DeleteOrder(Order order)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Order GetByID(int id)
+        public Order GetById(int id)
         {
             throw new NotImplementedException();
         }
@@ -38,7 +28,17 @@ namespace BusinessLayer.Concrete
             throw new NotImplementedException();
         }
 
-        public void UpdateOrder(Order order)
+        public void TAdd(Order t)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void TDelete(Order t)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void TUpdate(Order t)
         {
             throw new NotImplementedException();
         }

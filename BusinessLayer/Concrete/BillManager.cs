@@ -18,17 +18,7 @@ namespace BusinessLayer.Concrete
             _billDal = billDal;
         }
 
-        public void AddBill(Bill bill)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void DeleteBill(Bill bill)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Bill GetByID(int id)
+        public Bill GetById(int id)
         {
             throw new NotImplementedException();
         }
@@ -38,7 +28,17 @@ namespace BusinessLayer.Concrete
             throw new NotImplementedException();
         }
 
-        public void UpdateBill(Bill bill)
+        public void TAdd(Bill t)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void TDelete(Bill t)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void TUpdate(Bill t)
         {
             throw new NotImplementedException();
         }

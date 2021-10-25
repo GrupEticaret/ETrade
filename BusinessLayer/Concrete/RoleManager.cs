@@ -11,6 +11,7 @@ namespace BusinessLayer.Concrete
 {
     public class RoleManager : IRoleService
     {
+        //deneme
         IRoleDal _roleDal;
 
         public RoleManager(IRoleDal roleDal)
@@ -18,17 +19,7 @@ namespace BusinessLayer.Concrete
             _roleDal = roleDal;
         }
 
-        public void AddRole(Role role)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void DeleteRole(Role role)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Role GetByID(int id)
+        public Role GetById(int id)
         {
             throw new NotImplementedException();
         }
@@ -38,7 +29,17 @@ namespace BusinessLayer.Concrete
             throw new NotImplementedException();
         }
 
-        public void UpdateRole(Role role)
+        public void TAdd(Role t)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void TDelete(Role t)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void TUpdate(Role t)
         {
             throw new NotImplementedException();
         }

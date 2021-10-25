@@ -18,17 +18,7 @@ namespace BusinessLayer.Concrete
             _userDal = userDal;
         }
 
-        public void AddUser(User user)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void DeleteUser(User user)
-        {
-            throw new NotImplementedException();
-        }
-
-        public User GetByID(int id)
+        public User GetById(int id)
         {
             throw new NotImplementedException();
         }
@@ -38,7 +28,17 @@ namespace BusinessLayer.Concrete
             throw new NotImplementedException();
         }
 
-        public void UpdateUser(User user)
+        public void TAdd(User t)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void TDelete(User t)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void TUpdate(User t)
         {
             throw new NotImplementedException();
         }

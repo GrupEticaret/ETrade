@@ -7,13 +7,7 @@ using System.Threading.Tasks;
 
 namespace BusinessLayer.Abstract
 {
-    public interface IOrderStatusService
+    public interface IOrderStatusService : IGenericService<OrderStatus>
     {
-        void AddOrderStatus(OrderStatus orderStatus);
-        void DeleteOrderStatus(OrderStatus orderStatus);
-        void UpdateOrderStatus(OrderStatus orderStatus);
-        List<OrderStatus> GetList();
-        OrderStatus GetByID(int id);
-        //
     }
 }

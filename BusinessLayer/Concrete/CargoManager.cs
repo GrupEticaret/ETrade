@@ -18,17 +18,7 @@ namespace BusinessLayer.Concrete
             _cargoDal = cargoDal;
         }
 
-        public void AddCargo(Cargo cargo)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void DeleteCargo(Cargo cargo)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Cargo GetByID(int id)
+        public Cargo GetById(int id)
         {
             throw new NotImplementedException();
         }
@@ -38,7 +28,17 @@ namespace BusinessLayer.Concrete
             throw new NotImplementedException();
         }
 
-        public void UpdateCargo(Cargo cargo)
+        public void TAdd(Cargo t)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void TDelete(Cargo t)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void TUpdate(Cargo t)
         {
             throw new NotImplementedException();
         }
