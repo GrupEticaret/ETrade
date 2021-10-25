@@ -7,12 +7,8 @@ using System.Threading.Tasks;
 
 namespace BusinessLayer.Abstract
 {
-    public interface IRoleService
+    public interface IRoleService : IGenericService<Role>
     {
-        void AddRole(Role role);
-        void DeleteRole(Role role);
-        void UpdateRole(Role role);
-        List<Role> GetList();
-        Role GetByID(int id);
+
     }
 }

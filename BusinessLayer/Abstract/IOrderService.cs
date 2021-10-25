@@ -7,12 +7,7 @@ using System.Threading.Tasks;
 
 namespace BusinessLayer.Abstract
 {
-    public interface IOrderService
+    public interface IOrderService : IGenericService<Order>
     {
-        void AddOrder(Order order);
-        void DeleteOrder(Order order);
-        void UpdateOrder(Order order);
-        List<Order> GetList();
-        Order GetByID(int id);
     }
 }
