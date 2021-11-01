@@ -9,6 +9,7 @@ namespace BusinessLayer.Abstract
 {
     public interface IMainCategoryService : IGenericService<MainCategory>
     {
+        List<MainCategory> GetMostPopularCategories();
         /*
         void AddMainCategory(MainCategory mainCategory);
         void DeleteMainCategory(MainCategory mainCategory);

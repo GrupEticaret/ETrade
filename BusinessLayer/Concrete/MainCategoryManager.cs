@@ -27,6 +27,11 @@ namespace BusinessLayer.Concrete
             throw new NotImplementedException();
         }
 
+        public List<MainCategory> GetMostPopularCategories()
+        {
+            return _mainCategoryDal.GetList().OrderByDescending(x => x.MainCategoryID).Take(9).ToList();
+        }
+
         public List<MainCategory> GetList()
         {
             throw new NotImplementedException();
@@ -46,7 +51,7 @@ namespace BusinessLayer.Concrete
         {
             throw new NotImplementedException();
         }
-
+        
      
     }
 }
