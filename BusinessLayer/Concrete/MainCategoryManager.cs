@@ -18,10 +18,6 @@ namespace BusinessLayer.Concrete
             _mainCategoryDal = mainCategoryDal;
         }
 
-        
-
-       
-
         public MainCategory GetById(int id)
         {
             throw new NotImplementedException();
@@ -29,7 +25,7 @@ namespace BusinessLayer.Concrete
 
         public List<MainCategory> GetMostPopularCategories()
         {
-            return _mainCategoryDal.GetList().OrderByDescending(x => x.MainCategoryID).Take(9).ToList();
+            return _mainCategoryDal.GetList().OrderByDescending(x => x.MainCategoryID).Take(9).Where(x=>x.MainCategoryStatus).ToList();
         }
 
         public List<MainCategory> GetList()
