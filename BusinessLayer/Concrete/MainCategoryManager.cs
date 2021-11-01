@@ -18,10 +18,6 @@ namespace BusinessLayer.Concrete
             _mainCategoryDal = mainCategoryDal;
         }
 
-        
-
-       
-
         public MainCategory GetById(int id)
         {
             throw new NotImplementedException();

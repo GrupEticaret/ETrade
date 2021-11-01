@@ -11,5 +11,8 @@ namespace DataAccessLayer.EntityFramework
 {
     public class EfOrderStatusRepository : GenericRepository<OrderStatus>, IOrderStatusDal
     {
+
+
+
     }
 }
