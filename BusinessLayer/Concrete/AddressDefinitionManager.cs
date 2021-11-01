@@ -18,17 +18,7 @@ namespace BusinessLayer.Concrete
             _addressDefinitionDal = addressDefinitionDal;
         }
 
-        public void AddAddressDefinition(AddressDefinition addressDefinition)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void DeleteAddressDefinition(AddressDefinition addressDefinition)
-        {
-            throw new NotImplementedException();
-        }
-
-        public AddressDefinition GetByID(int id)
+        public AddressDefinition GetById(int id)
         {
             throw new NotImplementedException();
         }
@@ -38,7 +28,17 @@ namespace BusinessLayer.Concrete
             throw new NotImplementedException();
         }
 
-        public void UpdateAddressDefinition(AddressDefinition addressDefinition)
+        public void TAdd(AddressDefinition t)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void TDelete(AddressDefinition t)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void TUpdate(AddressDefinition t)
         {
             throw new NotImplementedException();
         }

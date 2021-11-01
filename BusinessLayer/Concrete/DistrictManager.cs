@@ -1,6 +1,5 @@
 ﻿using BusinessLayer.Abstract;
 using DataAccessLayer.Abstract;
-using EntityLayer.Concrete;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,36 +8,36 @@ using System.Threading.Tasks;
 
 namespace BusinessLayer.Concrete
 {
-    public class OrderStatusManager : IOrderStatusService
+    public class DistrictManager : IDistrictService
     {
-        IOrderStatusDal _orderStatusDal;
+        IDistrictDal _districtDal;
 
-        public OrderStatusManager(IOrderStatusDal orderStatusDal)
+        public DistrictManager(IDistrictDal districtDal)
         {
-            _orderStatusDal = orderStatusDal;
+            _districtDal = districtDal;
         }
 
-        public OrderStatus GetById(int id)
-        {
-            throw new NotImplementedException();
-        }
-
-        public List<OrderStatus> GetList()
+        public EntityLayer.Concrete.District GetById(int id)
         {
             throw new NotImplementedException();
         }
 
-        public void TAdd(OrderStatus t)
+        public List<EntityLayer.Concrete.District> GetList()
         {
             throw new NotImplementedException();
         }
 
-        public void TDelete(OrderStatus t)
+        public void TAdd(EntityLayer.Concrete.District t)
         {
             throw new NotImplementedException();
         }
 
-        public void TUpdate(OrderStatus t)
+        public void TDelete(EntityLayer.Concrete.District t)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void TUpdate(EntityLayer.Concrete.District t)
         {
             throw new NotImplementedException();
         }

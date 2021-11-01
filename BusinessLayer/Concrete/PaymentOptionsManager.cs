@@ -18,17 +18,7 @@ namespace BusinessLayer.Concrete
             _paymentOptionsDal = paymentOptionsDal;
         }
 
-        public void AddPaymentOptions(PaymentOptions paymentOptions)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void DeletePaymentOptions(PaymentOptions paymentOptions)
-        {
-            throw new NotImplementedException();
-        }
-
-        public PaymentOptions GetByID(int id)
+        public PaymentOptions GetById(int id)
         {
             throw new NotImplementedException();
         }
@@ -38,7 +28,17 @@ namespace BusinessLayer.Concrete
             throw new NotImplementedException();
         }
 
-        public void UpdatePaymentOptions(PaymentOptions paymentOptions)
+        public void TAdd(PaymentOptions t)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void TDelete(PaymentOptions t)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void TUpdate(PaymentOptions t)
         {
             throw new NotImplementedException();
         }

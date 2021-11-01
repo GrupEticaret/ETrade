@@ -9,36 +9,36 @@ using System.Threading.Tasks;
 
 namespace BusinessLayer.Concrete
 {
-    public class OrderStatusManager : IOrderStatusService
+    public class CountryManager : ICountryService
     {
-        IOrderStatusDal _orderStatusDal;
+        ICountryDal _countryDal;
 
-        public OrderStatusManager(IOrderStatusDal orderStatusDal)
+        public CountryManager(ICountryDal countryDal)
         {
-            _orderStatusDal = orderStatusDal;
+            _countryDal = countryDal;
         }
 
-        public OrderStatus GetById(int id)
-        {
-            throw new NotImplementedException();
-        }
-
-        public List<OrderStatus> GetList()
+        public Country GetById(int id)
         {
             throw new NotImplementedException();
         }
 
-        public void TAdd(OrderStatus t)
+        public List<Country> GetList()
         {
             throw new NotImplementedException();
         }
 
-        public void TDelete(OrderStatus t)
+        public void TAdd(Country t)
         {
             throw new NotImplementedException();
         }
 
-        public void TUpdate(OrderStatus t)
+        public void TDelete(Country t)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void TUpdate(Country t)
         {
             throw new NotImplementedException();
         }

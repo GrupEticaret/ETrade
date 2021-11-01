@@ -7,12 +7,7 @@ using System.Threading.Tasks;
 
 namespace BusinessLayer.Abstract
 {
-    public interface IPaymentOptionsService
+    public interface IPaymentOptionsService : IGenericService<PaymentOptions>
     {
-        void AddPaymentOptions(PaymentOptions paymentOptions);
-        void DeletePaymentOptions(PaymentOptions paymentOptions);
-        void UpdatePaymentOptions(PaymentOptions paymentOptions);
-        List<PaymentOptions> GetList();
-        PaymentOptions GetByID(int id);
     }
 }

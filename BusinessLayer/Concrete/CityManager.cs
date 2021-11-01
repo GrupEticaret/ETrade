@@ -9,36 +9,36 @@ using System.Threading.Tasks;
 
 namespace BusinessLayer.Concrete
 {
-    public class OrderStatusManager : IOrderStatusService
+    public class CityManager : ICityService
     {
-        IOrderStatusDal _orderStatusDal;
+        ICityDal _cityDal;
 
-        public OrderStatusManager(IOrderStatusDal orderStatusDal)
+        public CityManager(ICityDal cityDal)
         {
-            _orderStatusDal = orderStatusDal;
+            _cityDal = cityDal;
         }
 
-        public OrderStatus GetById(int id)
-        {
-            throw new NotImplementedException();
-        }
-
-        public List<OrderStatus> GetList()
+        public City GetById(int id)
         {
             throw new NotImplementedException();
         }
 
-        public void TAdd(OrderStatus t)
+        public List<City> GetList()
         {
             throw new NotImplementedException();
         }
 
-        public void TDelete(OrderStatus t)
+        public void TAdd(City t)
         {
             throw new NotImplementedException();
         }
 
-        public void TUpdate(OrderStatus t)
+        public void TDelete(City t)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void TUpdate(City t)
         {
             throw new NotImplementedException();
         }

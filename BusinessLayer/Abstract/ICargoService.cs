@@ -7,12 +7,8 @@ using System.Threading.Tasks;
 
 namespace BusinessLayer.Abstract
 {
-    public interface ICargoService
+    public interface ICargoService : IGenericService<Cargo>
     {
-        void AddCargo(Cargo cargo);
-        void DeleteCargo(Cargo cargo);
-        void UpdateCargo(Cargo cargo);
-        List<Cargo> GetList();
-        Cargo GetByID(int id);
+
     }
 }

@@ -26,7 +26,27 @@ namespace BusinessLayer.Concrete
             throw new NotImplementedException();
         }
 
+        public AddressDefinition GetById(int id)
+        {
+            throw new NotImplementedException();
+        }
+
         public List<AddressDefinition> GetList()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void TAdd(AddressDefinition t)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void TDelete(AddressDefinition t)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void TUpdate(AddressDefinition t)
         {
             throw new NotImplementedException();
         }
