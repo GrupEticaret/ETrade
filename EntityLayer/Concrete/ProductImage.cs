@@ -17,9 +17,12 @@ namespace EntityLayer.Concrete
         public string SlideImage { get; set; }
 
         //Product Ve ProductImage ilişkisi
+        
         [ForeignKey("Product")]
         public int ProductID { get; set; }
         public Product Product { get; set; }
+        
+       
 
     }
 }

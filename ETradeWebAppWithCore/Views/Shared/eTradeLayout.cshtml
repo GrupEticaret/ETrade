@@ -2,6 +2,7 @@
 @{
     Layout = null;
 }
+<h1>Deneme</h1>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -121,8 +122,8 @@
     <div class="header">
         <div class="container-fluid">
             <div class="row">
-                
-               @await Component.InvokeAsync("LayoutCategories")
+
+                @await Component.InvokeAsync("LayoutCategories")
 
 
                 @*<div class="col-md-6">
@@ -296,6 +297,7 @@
         </div>*@
     <!-- Call to Action End -->
     <!-- Featured Product Start -->
+    @await Component.InvokeAsync("LayoutProductListWithCategory")
     @*<div class="featured-product product">
             <div class="container-fluid">
                 <div class="section-header">

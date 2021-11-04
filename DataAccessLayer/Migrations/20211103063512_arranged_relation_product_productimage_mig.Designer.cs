@@ -4,14 +4,16 @@ using DataAccessLayer.Concrete;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace DataAccessLayer.Migrations
 {
     [DbContext(typeof(Context))]
-    partial class ContextModelSnapshot : ModelSnapshot
+    [Migration("20211103063512_arranged_relation_product_productimage_mig")]
+    partial class arranged_relation_product_productimage_mig
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -417,8 +419,8 @@ namespace DataAccessLayer.Migrations
                     b.Property<int?>("ProductFeatureID")
                         .HasColumnType("int");
 
-                    b.Property<string>("ProductPicture")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("ProductImageID")
+                        .HasColumnType("int");
 
                     b.Property<int?>("ProductPriceID")
                         .HasColumnType("int");
@@ -433,6 +435,8 @@ namespace DataAccessLayer.Migrations
                     b.HasIndex("MainCategoryID");
 
                     b.HasIndex("ProductFeatureID");
+
+                    b.HasIndex("ProductImageID");
 
                     b.HasIndex("ProductPriceID");
 
@@ -793,6 +797,12 @@ namespace DataAccessLayer.Migrations
                         .WithMany("Products")
                         .HasForeignKey("ProductFeatureID");
 
+                    b.HasOne("EntityLayer.Concrete.ProductImage", "ProductImage")
+                        .WithMany("Products")
+                        .HasForeignKey("ProductImageID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.HasOne("EntityLayer.Concrete.ProductPrice", "ProductPrice")
                         .WithMany("Products")
                         .HasForeignKey("ProductPriceID");
@@ -800,6 +810,8 @@ namespace DataAccessLayer.Migrations
                     b.Navigation("Brand");
 
                     b.Navigation("MainCategory");
+
+                    b.Navigation("ProductImage");
 
                     b.Navigation("ProductPrice");
                 });
@@ -966,6 +978,11 @@ namespace DataAccessLayer.Migrations
                 {
                     b.Navigation("ProductFeatureDetails");
 
+                    b.Navigation("Products");
+                });
+
+            modelBuilder.Entity("EntityLayer.Concrete.ProductImage", b =>
+                {
                     b.Navigation("Products");
                 });
 
