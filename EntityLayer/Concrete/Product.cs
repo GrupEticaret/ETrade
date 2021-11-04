@@ -15,7 +15,7 @@ namespace EntityLayer.Concrete
         public int ProductID { get; set; }
         public string ProductDescription { get; set; }
         public bool ProductStatus { get; set; }
-        public string ProductPicture { get; set; }
+      
         //Category Ve Product ilişkisi
         [ForeignKey("MainCategory")]
         public int MainCategoryID { get; set; }
