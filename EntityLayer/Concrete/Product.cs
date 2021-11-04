@@ -15,6 +15,7 @@ namespace EntityLayer.Concrete
         public int ProductID { get; set; }
         public string ProductDescription { get; set; }
         public bool ProductStatus { get; set; }
+        public string ProductPicture { get; set; }
         //Category Ve Product ilişkisi
         [ForeignKey("MainCategory")]
         public int MainCategoryID { get; set; }
@@ -24,7 +25,9 @@ namespace EntityLayer.Concrete
         public int? BrandID { get; set; }
         public Brand Brand { get; set; }
         //ProductImage Ve Product İlişkisi
-       
+
+
+
         public List<ProductImage> ProductImages { get; set; }
         //Productfeature Ve featuredetail arasındaki çoklu ilişki 
         public List<ProductFeatureDetail> ProductFeatureDetails { get; set; }//çoka çok ilişki

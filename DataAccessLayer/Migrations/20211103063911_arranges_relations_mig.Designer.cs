@@ -4,14 +4,16 @@ using DataAccessLayer.Concrete;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace DataAccessLayer.Migrations
 {
     [DbContext(typeof(Context))]
-    partial class ContextModelSnapshot : ModelSnapshot
+    [Migration("20211103063911_arranges_relations_mig")]
+    partial class arranges_relations_mig
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -492,10 +494,15 @@ namespace DataAccessLayer.Migrations
                     b.Property<string>("ImagePath")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("ProductID")
+                        .HasColumnType("int");
+
                     b.Property<string>("SlideImage")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("ProductImageID");
+
+                    b.HasIndex("ProductID");
 
                     b.ToTable("ProductImages");
                 });
@@ -819,6 +826,17 @@ namespace DataAccessLayer.Migrations
                     b.Navigation("ProductFeature");
                 });
 
+            modelBuilder.Entity("EntityLayer.Concrete.ProductImage", b =>
+                {
+                    b.HasOne("EntityLayer.Concrete.Product", "Product")
+                        .WithMany("ProductImages")
+                        .HasForeignKey("ProductID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Product");
+                });
+
             modelBuilder.Entity("EntityLayer.Concrete.Role", b =>
                 {
                     b.HasOne("EntityLayer.Concrete.Role", null)
@@ -958,6 +976,8 @@ namespace DataAccessLayer.Migrations
                     b.Navigation("orders");
 
                     b.Navigation("ProductFeatureDetails");
+
+                    b.Navigation("ProductImages");
 
                     b.Navigation("shoppingCart");
                 });
