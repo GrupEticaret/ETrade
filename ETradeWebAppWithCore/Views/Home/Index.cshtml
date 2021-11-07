@@ -5,5 +5,72 @@
 }
 
 <h1>EIndex</h1>
+<div class="newsletter">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-6">
+                <h1>Subscribe Our Newsletter</h1>
+            </div>
+            <div class="col-md-6">
+                <form id="form" asp-controller="SubscribeMail" asp-action="SubscribeMail">
+                    <input type="email" required=""  placeholder="mail" name="Mail">
+                    <input type="submit" value="Subscribe">
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+
+
+
+    $("#form").submit(function (e) {
+        e.preventDefault(); // avoid to execute the actual submit of the form.
+
+        var form = $(this);
+        var url = form.attr('action');
+
+        $.ajax({
+            type: "POST",
+            url: url,
+            data: form.serialize(), // serializes the form's elements.
+            success: function (result) {
+
+                console.log(result);
+
+                if (result.success) {
+                    swal({
+                        title: "Bilgi",
+                        text: "Kayıt Başarılı",
+                        icon: "success",
+                        button: "Tamam",
+                    });
+
+
+
+
+
+                }
+                else {
+                    swal({
+                        title: "Uyarı",
+                        text: result.message,
+                        icon: "error",
+                        button: "Tamam",
+                    });
+                }
+
+            },
+            error: function () {
+                swal({
+                    title: "Uyarı",
+                    text: "saaa",
+                    icon: "error",
+                    button: "Tamam",
+                });
+            }
+        });
+    });
+</script>
 
 
