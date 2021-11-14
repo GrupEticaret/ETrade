@@ -47,7 +47,15 @@ namespace BusinessLayer.Concrete
         {
             throw new NotImplementedException();
         }
-        
-     
+
+        public List<MainCategory> GetMainCategoriesBySubCategories()
+        {
+            return _mainCategoryDal.GetMainCategoriesBySubCategories();
+        }
+
+        public List<MainCategory> GetMainCategoriesBySubCategoriesMostPopular()
+        {
+            return _mainCategoryDal.GetMainCategoriesBySubCategoriesMostPopular();
+        }
     }
 }

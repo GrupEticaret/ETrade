@@ -13,7 +13,7 @@ namespace ETradeWebAppWithCore.ViewComponents.Category
         MainCategoryManager mainCategoryManager = new MainCategoryManager(new EfMainCategoryRepository());
         public IViewComponentResult Invoke()
         {
-            var values = mainCategoryManager.GetMostPopularCategories();
+            var values = mainCategoryManager.GetMainCategoriesBySubCategoriesMostPopular();
             return View(values);
         }
     }
