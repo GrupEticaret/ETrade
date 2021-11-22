@@ -1,0 +1,80 @@
+﻿<section class="shop-newsletter section">
+    <div class="container">
+        <div class="inner-top">
+            <div class="row">
+                <div class="col-lg-8 offset-lg-2 col-12">
+                    <!-- Start Newsletter Inner -->
+                    <div class="inner">
+                        <h4>Newsletter</h4>
+                        <p> Subscribe to our newsletter and get <span>10%</span> off your first purchase</p>
+                        <form id="form" asp-controller="SubscribeMail" asp-action="SubscribeMail" class="newsletter-inner">
+                            <input placeholder="Your email address" required="" type="email">
+                            <button class="btn">Subscribe</button>
+                        </form>
+                    </div>
+                    <!-- End Newsletter Inner -->
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+
+
+<script type="text/javascript">
+
+
+
+    $("#form").submit(function (e) {
+        e.preventDefault(); // avoid to execute the actual submit of the form.
+
+        var form = $(this);
+        var url = form.attr('action');
+
+        $.ajax({
+            type: "POST",
+            url: url,
+            data: form.serialize(), // serializes the form's elements.
+            success: function (result) {
+
+                console.log(result);
+
+                if (result.success) {
+                    swal({
+                        title: "Bilgi",
+                        text: "Kayıt Başarılı",
+                        icon: "success",
+                        button: "Tamam",
+                    });
+
+
+
+
+
+                }
+                else {
+                    swal({
+                        title: "Uyarı",
+                        text: result.message,
+                        icon: "error",
+                        button: "Tamam",
+                    });
+                }
+
+            },
+            error: function () {
+                swal({
+                    title: "Uyarı",
+                    text: "saaa",
+                    icon: "error",
+                    button: "Tamam",
+                });
+            }
+        });
+    });
+</script>
+
+
+
