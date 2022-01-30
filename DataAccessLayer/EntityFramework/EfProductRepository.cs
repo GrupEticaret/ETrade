@@ -20,6 +20,7 @@ namespace DataAccessLayer.EntityFramework
             using (var c = new Context())
             {
                 return c.Products.Include(x => x.MainCategory).ToList(); //Bu Include metodunu yazmış oldum.
+                //Düzeltilecek
             }
         }
 
