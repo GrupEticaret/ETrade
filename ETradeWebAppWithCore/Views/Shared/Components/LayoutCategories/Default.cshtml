@@ -1,37 +1,19 @@
 ﻿@model List<EntityLayer.Concrete.MainCategory>
 
-<div class="col-md-3">
-    <nav class="navbar bg-light">
-        <ul class="navbar-nav">
-            @foreach (var item in Model)
-            {
-                <li class="nav-item">
-                    <a class="nav-link" href="#"><i class="fa fa-home"></i>@item.MainCategoryName</a>
-                </li>
-            }
 
 
-            @*<li class="nav-item">
-                    <a class="nav-link" href="#"><i class="fa fa-shopping-bag"></i>Best Selling</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#"><i class="fa fa-plus-square"></i>New Arrivals</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#"><i class="fa fa-female"></i>Fashion & Beauty</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#"><i class="fa fa-child"></i>Kids & Babies Clothes</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#"><i class="fa fa-tshirt"></i>Men & Women Clothes</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#"><i class="fa fa-mobile-alt"></i>Gadgets & Accessories</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#"><i class="fa fa-microchip"></i>Electronics & Accessories</a>
-                </li>*@
-        </ul>
-    </nav>
-</div>
+<ul class="main-category">
+    @foreach (var item in Model)
+    {
+        <li>
+            <a href="#">@item.MainCategoryName <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+            <ul class="sub-category">
+                @foreach (var item2 in item.SubCategories)
+                {
+                    <li><a href="#">@item2.SubCategoryName</a></li>
+                }
+            </ul>
+        </li>
+    }
+</ul>
+

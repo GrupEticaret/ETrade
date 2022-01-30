@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BusinessLayer.Concrete
 {
-    class BanksManager
+    public class BanksManager
     {
     }
 }

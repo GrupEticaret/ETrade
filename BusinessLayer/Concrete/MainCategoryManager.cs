@@ -25,7 +25,7 @@ namespace BusinessLayer.Concrete
 
         public List<MainCategory> GetMostPopularCategories()
         {
-            return _mainCategoryDal.GetList().OrderByDescending(x => x.MainCategoryID).Take(9).ToList();
+            return _mainCategoryDal.GetList().OrderByDescending(x => x.MainCategoryID).Take(10).ToList();
         }
 
         public List<MainCategory> GetList()
@@ -47,7 +47,15 @@ namespace BusinessLayer.Concrete
         {
             throw new NotImplementedException();
         }
-        
-     
+
+        public List<MainCategory> GetMainCategoriesBySubCategories()
+        {
+            return _mainCategoryDal.GetMainCategoriesBySubCategories();
+        }
+
+        public List<MainCategory> GetMainCategoriesBySubCategoriesMostPopular()
+        {
+            return _mainCategoryDal.GetMainCategoriesBySubCategoriesMostPopular();
+        }
     }
 }

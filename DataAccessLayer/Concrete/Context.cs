@@ -15,7 +15,7 @@ namespace DataAccessLayer.Concrete
             //Biz bu confire metodu içinde veritabanına bağlantı stringimizi tanımlarız.
             //Tanımladığımız bu connection Stringin türü DbContextOptionsBuilder'dır
             //Yani conection stringimi .Net core da bu şekilde tanımlayabilirim.
-            optionsBuilder.UseSqlServer("server=LAPTOP-ISO96UVH\\SQLEXPRESS;database=ETradeDb3;integrated security=true;");
+            optionsBuilder.UseSqlServer("server=DESKTOP-914I9BN;database=ETradeDb3;integrated security=true;  ");
             //Veritabanı bağlantı stringimi bu şekilde tanımlarım.
 
         }
@@ -44,5 +44,6 @@ namespace DataAccessLayer.Concrete
         public DbSet<ShoppingCart> ShoppingCarts { get; set; }
         public DbSet<SubCategory> SubCategories { get; set; }
         public DbSet<User> Users { get; set; }
+        public DbSet<SubscribeMail> SubscribeMails { get; set; }
     }
 }

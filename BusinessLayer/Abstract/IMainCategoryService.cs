@@ -10,6 +10,9 @@ namespace BusinessLayer.Abstract
     public interface IMainCategoryService : IGenericService<MainCategory>
     {
         List<MainCategory> GetMostPopularCategories();
+        List<MainCategory> GetMainCategoriesBySubCategories();
+        List<MainCategory> GetMainCategoriesBySubCategoriesMostPopular();
+
         /*
         void AddMainCategory(MainCategory mainCategory);
         void DeleteMainCategory(MainCategory mainCategory);

@@ -417,9 +417,6 @@ namespace DataAccessLayer.Migrations
                     b.Property<int?>("ProductFeatureID")
                         .HasColumnType("int");
 
-                    b.Property<string>("ProductPicture")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<int?>("ProductPriceID")
                         .HasColumnType("int");
 
@@ -492,10 +489,15 @@ namespace DataAccessLayer.Migrations
                     b.Property<string>("ImagePath")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("ProductID")
+                        .HasColumnType("int");
+
                     b.Property<string>("SlideImage")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("ProductImageID");
+
+                    b.HasIndex("ProductID");
 
                     b.ToTable("ProductImages");
                 });
@@ -579,6 +581,24 @@ namespace DataAccessLayer.Migrations
                     b.HasIndex("MainCategoryID");
 
                     b.ToTable("SubCategories");
+                });
+
+            modelBuilder.Entity("EntityLayer.Concrete.SubscribeMail", b =>
+                {
+                    b.Property<int>("MailID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Mail")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("MailStatus")
+                        .HasColumnType("bit");
+
+                    b.HasKey("MailID");
+
+                    b.ToTable("SubscribeMails");
                 });
 
             modelBuilder.Entity("EntityLayer.Concrete.User", b =>
@@ -819,6 +839,17 @@ namespace DataAccessLayer.Migrations
                     b.Navigation("ProductFeature");
                 });
 
+            modelBuilder.Entity("EntityLayer.Concrete.ProductImage", b =>
+                {
+                    b.HasOne("EntityLayer.Concrete.Product", "Product")
+                        .WithMany("ProductImages")
+                        .HasForeignKey("ProductID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Product");
+                });
+
             modelBuilder.Entity("EntityLayer.Concrete.Role", b =>
                 {
                     b.HasOne("EntityLayer.Concrete.Role", null)
@@ -958,6 +989,8 @@ namespace DataAccessLayer.Migrations
                     b.Navigation("orders");
 
                     b.Navigation("ProductFeatureDetails");
+
+                    b.Navigation("ProductImages");
 
                     b.Navigation("shoppingCart");
                 });
