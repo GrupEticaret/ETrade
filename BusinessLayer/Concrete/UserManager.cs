@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace BusinessLayer.Concrete
 {
-    class UserManager : IUserService
+    public class UserManager : IUserService
     {
         IUserDal _userDal;
 
@@ -30,7 +30,7 @@ namespace BusinessLayer.Concrete
 
         public void TAdd(User t)
         {
-            throw new NotImplementedException();
+            _userDal.Insert(t);
         }
 
         public void TDelete(User t)
